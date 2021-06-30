@@ -17,6 +17,9 @@ export default function Header() {
         </Link>
       </div>
       <div className="header_navigation">
+        <Link className="header_nav_el" to="/prodotto">
+          Prodotto
+        </Link>
         <Link className="header_nav_el" to="/nuove-tendenze">
           Nuove tendenze
         </Link>

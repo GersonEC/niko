@@ -8,11 +8,13 @@ import Discounts from "./pages/Discounts/Discounts";
 import Gifts from "./pages/Gifts/Gifts";
 import NewTrends from "./pages/NewTrends/NewTrends";
 import Product from "pages/Product/Product";
+import Home from "pages/Home/Home";
 
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Product} />
+      <Route exact path="/" component={Home} />
+      <Route path="/prodotto" component={Product} />
       <Route path="/nuove-tendenze" component={NewTrends} />
       <Route path="/regali" component={Gifts} />
       <Route path="/uomo" component={Man} />
