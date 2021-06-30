@@ -1,0 +1,33 @@
+.productCard {
+  inline-size: 24.3rem;
+  block-size: 30.5rem;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.productCard_name {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.productCard_description {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 15px;
+  color: gray;
+}
+
+.productCard_price {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
