@@ -38,5 +38,14 @@ test("render header elements", () => {
 
 test("render footer elements", () => {
   render(<Footer />);
-  screen.getByText(/footer/i);
+  screen.getByText(/CERCARE NEGOZIO/i);
+  screen.getByText(/REGISTRATI ALLA NEWSLETTER/i);
+  screen.getByText(/MEMBERSHIP/i);
+  screen.getByText(/INVIACI UN TUO FEEDBACK/i);
+  screen.getByText(/RICEVERE AIUTO/i);
+  screen.getByText(/RIGUARDO A NIKE/i);
+  screen.getByText(/Notizie/i);
+  screen.getByText(/Lavora con noi/i);
+  screen.getByText(/Investitori/i);
+  screen.getByText(/Sostenibilità/i);
 });
