@@ -1,8 +1,11 @@
 .footer {
   display: flex;
-  inline-size: 99vw;
+  inline-size: 100%;
   justify-content: space-between;
-  padding: 0 3.4rem 0 3.4rem;
+  padding: 3.4rem 3.4rem 3.4rem 3.4rem;
+  color: white;
+  background-color: black;
+  height: 22rem;
 }
 
 .footer_info {

@@ -1,10 +1,8 @@
 import axios from "axios";
 import * as React from "react";
 import { Product } from "utils/models";
+import { Spin } from "antd";
 import "./Home.scss";
-
-//IMPLEMENTARE LOADER
-//IMPLEMENTARE INFINITE SCROLLING
 
 interface HomeState {
   products: Product[];
@@ -23,6 +21,10 @@ export default function Home() {
 
   const { products, loading } = state;
 
+  React.useLayoutEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   React.useEffect(() => {
     setState((prevState) => ({
       ...prevState,
@@ -40,7 +42,11 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <h1>Caricamento prodotti in corso...</h1>;
+    return (
+      <div className="spin_container">
+        <Spin size="large" />
+      </div>
+    );
   }
   return (
     <div className="product_container">

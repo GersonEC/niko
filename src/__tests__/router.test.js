@@ -12,7 +12,6 @@ test("app render all pages and I can navigate to those pages", () => {
       <App />
     </Router>
   );
-  expect(screen.getByText(/product page/i));
   userEvent.click(screen.getByText(/uomo/i));
   expect(screen.getAllByText(/uomo/i));
   userEvent.click(screen.getByText(/donna/i));

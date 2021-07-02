@@ -9,7 +9,7 @@ interface TrendListProps {
 export default function TrendList(props: TrendListProps) {
   return (
     <div>
-      <p>Principali Tendenze</p>
+      <p className="trenList_title">Principali Tendenze</p>
       <div className="trendList">
         {props.productCardList &&
           props.productCardList.map((item) => {

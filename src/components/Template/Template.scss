@@ -8,14 +8,11 @@
   width: 98.5vw;
   margin-top: 3.6rem;
   padding: 1rem;
+  min-height: 34vw;
 }
 
 .contentinfo {
   display: flex;
   align-items: center;
-  bottom: 0;
-  width: 98.5vw;
-  height: 22rem;
-  background-color: black;
-  color: white;
+  height: auto;
 }
