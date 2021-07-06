@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
 import { ButtonType } from "../../utils/models";
-import "./Button.scss";
 import { AiOutlineHeart } from "react-icons/ai";
 
 type ButtonNikoProps = {
@@ -21,6 +20,7 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
     fontFamily: "Avenir",
     ":hover": {
       cursor: "pointer",
+      opacity: 0.8,
     },
   },
   (props: ButtonNikoProps) => ({
@@ -33,11 +33,12 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
 interface ButtonProps {
   type: ButtonType;
   labelText: string;
+  onClick: () => void;
 }
 export default function Button(props: ButtonProps) {
   return (
     <div>
-      <ButtonNiko type={props.type} onClick={() => {}}>
+      <ButtonNiko type={props.type} onClick={props.onClick}>
         <div>
           <p>
             {props.labelText}{" "}

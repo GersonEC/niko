@@ -6,7 +6,6 @@ import NikoLogo from "../../assets/images/niko_logo.svg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import * as mediaQueries from "style/media-queries";
 import useWindowSize from "hooks/useWindowSize";
 import "antd/dist/antd.css";
 import "./Header.scss";
