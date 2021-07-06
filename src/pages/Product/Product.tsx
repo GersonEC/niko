@@ -12,7 +12,9 @@ export default function Product() {
   return (
     <div className="product_page_container">
       <div className="product_info">
-        <PreviewImages />
+        <div className="previewImages_container">
+          <PreviewImages />
+        </div>
         <div className="product_info_details">
           <ProductDetailPreview
             description="Scarpe per uomo"

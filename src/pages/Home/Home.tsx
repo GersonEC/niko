@@ -2,6 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import { Product } from "utils/models";
 import { Spin } from "antd";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 interface HomeState {
@@ -53,7 +54,9 @@ export default function Home() {
       {products.map((item) => {
         return (
           <div className="product" key={item.id}>
-            <img src={item.image} width={200} alt={item.title} />
+            <Link to="/prodotto">
+              <img src={item.image} width={200} alt={item.title} />
+            </Link>
           </div>
         );
       })}

@@ -5,12 +5,22 @@
   padding: 3.4rem 3.4rem 3.4rem 3.4rem;
   color: white;
   background-color: black;
-  height: 22rem;
+  height: 24rem;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55rem;
+  }
 }
 
 .footer_info {
   display: flex;
   gap: 4rem;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer_title {
@@ -36,5 +46,8 @@
 .social {
   :hover {
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1rem;
   }
 }

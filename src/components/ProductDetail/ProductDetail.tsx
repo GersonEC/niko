@@ -4,19 +4,19 @@ export default function ProductDetail() {
   return (
     <div className="productDetail">
       <p>
-        <b>Envío</b>
+        <b>Spedizione</b>
       </p>
       <p>
-        Para obtener información de envío precisa Editar ubicación Básquetbol en
-        el parque, barbacoas y sol de domingo. El resplandor sobrevive con el
-        calzado Nike Air Force 1 ’07, un modelo clásico del básquetbol, este OG
-        le da un toque novedoso al calzado de siempre: impecables capas de cuero
-        con puntadas perfectas, en un blanco clásico con la cantidad perfecta de
-        destellos para que brilles. <br />
-        - Color que se muestra: Blanco/Blanco <br />- Estilo: 315122-111
+        Pere ottenere informazione precisa riguardo la spedizione modificare
+        l'ubicazione basket nel parco, grigialta e sole di domenica. Lo
+        splendore soppravive con la calzatura Nike Air Force 1 '07, un modello
+        classico di basket, questo OG li da un tocco di novità alla calzatura di
+        sempre: impeccabile cuoio con punte perfette, in un bianco classico con
+        la quantita perfetta di dettagli per farti brillare <br />
+        - Colori che si mostra: Bianco/Biano <br />- Estilo: 315122-111
       </p>
       <p>
-        <b>Ver datos del producto</b>
+        <b>Guardare i dati del prodotto</b>
       </p>
     </div>
   );

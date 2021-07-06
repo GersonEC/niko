@@ -1,6 +1,6 @@
 .product_container {
   display: grid;
-  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   justify-content: center;
   gap: 2rem;
   padding: 5rem;
@@ -14,7 +14,7 @@
   padding: 2rem;
   :hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition: 0.3s;
   }
 }

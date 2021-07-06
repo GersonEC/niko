@@ -18,8 +18,17 @@
   justify-content: flex-end;
   align-items: center;
   gap: 2rem;
+  margin-right: 1rem;
   :hover {
     cursor: pointer;
+  }
+}
+
+.ant-drawer-body {
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
@@ -29,6 +38,7 @@
   margin-right: 3rem;
   justify-content: space-evenly;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .header_wishList {
