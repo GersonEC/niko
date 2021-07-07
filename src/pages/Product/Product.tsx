@@ -1,3 +1,4 @@
+import * as React from "react";
 import Button from "components/Button/Button";
 import { ButtonType } from "../../utils/models";
 import { sizeListData, productCardList } from "utils/data";
@@ -7,19 +8,38 @@ import TrendList from "components/TrendList/TrendList";
 import PreviewImages from "components/PreviewImages/PreviewImages";
 import ProductDetailPreview from "components/ProductDetail/ProductDetailPreview";
 import "./Product.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, selectCart } from "features/cart/cartSlice";
+import { useDispatch } from "react-redux";
+import { increment as incrementCart } from "features/cart/cartSlice";
+import { increment as incrementWishList } from "features/wishList/wishListSlice";
+import { message } from "antd";
+
+const key = "updatable";
 
 export default function Product() {
-  const cart = useSelector(selectCart);
   const dispatch = useDispatch();
 
   const onAddCartClick = () => {
-    dispatch(increment());
+    message.loading({ content: "Loading...", key });
+    setTimeout(() => {
+      dispatch(incrementCart());
+      message.success({
+        content: "Prodotto aggiunto correttamente nel carrello.",
+        key,
+        duration: 2,
+      });
+    }, 1000);
   };
 
   const onAddWishListClick = () => {
-    dispatch(decrement());
+    message.loading({ content: "Loading...", key });
+    setTimeout(() => {
+      dispatch(incrementWishList());
+      message.success({
+        content: "Prodotto aggiunto correttamente nella lista desideri.",
+        key,
+        duration: 2,
+      });
+    }, 1000);
   };
 
   return (

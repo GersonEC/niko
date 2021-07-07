@@ -9,10 +9,10 @@ export default function PreviewImages() {
   return (
     <div className="previewImages">
       <Image.PreviewGroup>
-        <Image width={397} src={Image1} />
-        <Image width={397} src={Image2} />
-        <Image width={397} src={Image3} />
-        <Image width={397} src={Image4} />
+        <Image width={395} src={Image1} />
+        <Image width={395} src={Image2} />
+        <Image width={395} src={Image3} />
+        <Image width={395} src={Image4} />
       </Image.PreviewGroup>
     </div>
   );

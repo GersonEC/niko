@@ -1,6 +1,6 @@
 .previewImages {
-  display: grid;
-  inline-size: 50.6rem;
-  grid-template-columns: 25.3rem 25.3rem;
-  grid-template-rows: 31.5rem 31.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }

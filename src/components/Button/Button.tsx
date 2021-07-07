@@ -13,7 +13,7 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
     justifyContent: "center",
     alignItems: "center",
     border: "0",
-    width: "24rem",
+    width: "22rem",
     borderRadius: "5rem",
     backgroundColor: "black",
     fontSize: "16px",

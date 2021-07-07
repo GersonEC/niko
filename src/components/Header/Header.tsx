@@ -9,10 +9,15 @@ import { Link } from "react-router-dom";
 import useWindowSize from "hooks/useWindowSize";
 import "antd/dist/antd.css";
 import "./Header.scss";
+import { useSelector } from "react-redux";
+import { selectCart } from "features/cart/cartSlice";
+import { selectWishList } from "features/wishList/wishListSlice";
 
 const { Search } = Input;
 
 export default function Header() {
+  const cart = useSelector(selectCart);
+  const wishList = useSelector(selectWishList);
   const isMobile = useWindowSize();
   const [isDrawerVisible, setIsDrawerVisible] = React.useState(false);
   const renderMenuNavigation = () => {
@@ -72,8 +77,18 @@ export default function Header() {
           onSearch={() => {}}
           style={{ width: 200 }}
         />
-        <AiOutlineHeart className="header_wishList" title="Lista desideri" />
-        <AiOutlineShoppingCart className="header_cart" title="Carrello" />
+        <div className="header_wishList">
+          <div className="cart_quantity_products">
+            <span className="cart_quantity_text">{wishList}</span>
+          </div>
+          <AiOutlineHeart title="Lista desideri" />
+        </div>
+        <div className="header_cart">
+          <div className="cart_quantity_products">
+            <span className="cart_quantity_text">{cart}</span>
+          </div>
+          <AiOutlineShoppingCart title="Carrello" />
+        </div>
       </div>
     </div>
   );

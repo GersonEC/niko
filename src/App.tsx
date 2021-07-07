@@ -9,7 +9,7 @@ import Gifts from "./pages/Gifts/Gifts";
 import NewTrends from "./pages/NewTrends/NewTrends";
 import Product from "pages/Product/Product";
 import Home from "pages/Home/Home";
-
+import "./App.css";
 const Routes = () => {
   return (
     <Switch>

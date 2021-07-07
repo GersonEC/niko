@@ -16,7 +16,9 @@ export default function ProductDetail() {
         - Colori che si mostra: Bianco/Biano <br />- Estilo: 315122-111
       </p>
       <p>
-        <b>Guardare i dati del prodotto</b>
+        <b>
+          <u>Guardare i dati del prodotto</u>
+        </b>
       </p>
     </div>
   );

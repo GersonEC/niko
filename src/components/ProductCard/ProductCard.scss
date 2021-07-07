@@ -1,8 +1,9 @@
 .productCard {
-  inline-size: 24.3rem;
+  inline-size: 22rem;
   block-size: 30.5rem;
   :hover {
     cursor: pointer;
+    opacity: 0.8;
   }
 }
 

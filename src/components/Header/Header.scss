@@ -49,10 +49,29 @@
 }
 
 .header_cart {
+  padding: 0.5rem;
   font-size: 1.3rem;
   :hover {
     cursor: pointer;
   }
+}
+
+.cart_quantity_products {
+  background-color: black;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  inline-size: 1rem;
+  position: absolute;
+  margin-left: 0.9rem;
+  top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart_quantity_text {
+  color: white;
+  font-weight: bold;
 }
 
 .header_nav_el {
