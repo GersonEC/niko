@@ -1,4 +1,4 @@
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 import SizeList from "../components/SizeList/SizeList";
 import { sizeListData } from "../utils/data";
 

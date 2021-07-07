@@ -1,4 +1,4 @@
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 import Button from "../components/Button/Button";
 import { ButtonType } from "../utils/models";
 

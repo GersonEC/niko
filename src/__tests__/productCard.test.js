@@ -1,4 +1,4 @@
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 import ProductCard from "../components/ProductCard/ProductCard";
 
 test("Render product card component", () => {

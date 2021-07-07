@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 import Template from "../components/Template/Template";
 import Footer from "../components/Footer/Footer";
 

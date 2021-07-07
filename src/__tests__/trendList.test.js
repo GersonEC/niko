@@ -1,4 +1,4 @@
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 import TrendList from "../components/TrendList/TrendList";
 import { productCardList } from "utils/data";
 

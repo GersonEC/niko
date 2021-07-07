@@ -1,5 +1,5 @@
 import Header from "../components/Header/Header";
-import { render, screen } from "./test-utils.jsx";
+import { render, screen } from "./test-utils";
 
 test("Header render wish list and cart", () => {
   render(<Header />);
