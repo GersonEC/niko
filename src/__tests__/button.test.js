@@ -1,6 +1,7 @@
-import { getByRole, getByText, render, screen } from "@testing-library/react";
+import { render, screen } from "./test-utils.jsx";
 import Button from "../components/Button/Button";
 import { ButtonType } from "../utils/models";
+
 test("render primary button", () => {
   //Arrange
   const buttonProps = {

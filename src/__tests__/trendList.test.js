@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "./test-utils.jsx";
 import TrendList from "../components/TrendList/TrendList";
 import { productCardList } from "utils/data";
 

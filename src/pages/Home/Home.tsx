@@ -22,10 +22,6 @@ export default function Home() {
 
   const { products, loading } = state;
 
-  React.useLayoutEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
   React.useEffect(() => {
     setState((prevState) => ({
       ...prevState,
