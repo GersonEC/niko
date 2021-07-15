@@ -50,7 +50,14 @@ export default function Home() {
       {products.map((item) => {
         return (
           <div className="product" key={item.id}>
-            <Link to="/prodotto">
+            <Link
+              to={{
+                pathname: "/prodotto",
+                state: {
+                  id: item.id,
+                },
+              }}
+            >
               <img src={item.image} width={200} alt={item.title} />
             </Link>
           </div>

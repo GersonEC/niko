@@ -12,11 +12,17 @@ import { useDispatch } from "react-redux";
 import { increment as incrementCart } from "features/cart/cartSlice";
 import { increment as incrementWishList } from "features/wishList/wishListSlice";
 import { message } from "antd";
+import { useLocation } from "react-router-dom";
 
 const key = "updatable";
+interface Location {
+  id: number;
+}
 
 export default function Product() {
   const dispatch = useDispatch();
+  const location = useLocation<Location>();
+  const idProduct = location.state.id;
 
   const onAddCartClick = () => {
     message.loading({ content: "Loading...", key });
