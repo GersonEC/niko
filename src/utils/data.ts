@@ -2,7 +2,32 @@ import { ProductCard, Size } from "./models";
 
 export const productCardList: ProductCard[] = [
   {
-    name: "Nike Air Force 1 High '07",
+    name: "Nike Air Force 1 High '01",
+    description: "Scarpe per uomo",
+    price: 259,
+  },
+  {
+    name: "Nike Air Force 1 High '02",
+    description: "Scarpe per uomo",
+    price: 259,
+  },
+  {
+    name: "Nike Air Force 1 High '03",
+    description: "Scarpe per uomo",
+    price: 259,
+  },
+  {
+    name: "Nike Air Force 1 High '04",
+    description: "Scarpe per uomo",
+    price: 259,
+  },
+  {
+    name: "Nike Air Force 1 High '05",
+    description: "Scarpe per uomo",
+    price: 259,
+  },
+  {
+    name: "Nike Air Force 1 High '06",
     description: "Scarpe per uomo",
     price: 259,
   },
@@ -12,42 +37,17 @@ export const productCardList: ProductCard[] = [
     price: 259,
   },
   {
-    name: "Nike Air Force 1 High '07",
+    name: "Nike Air Force 1 High '08",
     description: "Scarpe per uomo",
     price: 259,
   },
   {
-    name: "Nike Air Force 1 High '07",
+    name: "Nike Air Force 1 High '09",
     description: "Scarpe per uomo",
     price: 259,
   },
   {
-    name: "Nike Air Force 1 High '07",
-    description: "Scarpe per uomo",
-    price: 259,
-  },
-  {
-    name: "Nike Air Force 1 High '07",
-    description: "Scarpe per uomo",
-    price: 259,
-  },
-  {
-    name: "Nike Air Force 1 High '07",
-    description: "Scarpe per uomo",
-    price: 259,
-  },
-  {
-    name: "Nike Air Force 1 High '07",
-    description: "Scarpe per uomo",
-    price: 259,
-  },
-  {
-    name: "Nike Air Force 1 High '07",
-    description: "Scarpe per uomo",
-    price: 259,
-  },
-  {
-    name: "Nike Air Force 1 High '07",
+    name: "Nike Air Force 1 High '10",
     description: "Scarpe per uomo",
     price: 259,
   },

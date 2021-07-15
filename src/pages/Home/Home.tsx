@@ -3,6 +3,7 @@ import * as React from "react";
 import { Product } from "utils/models";
 import { Spin } from "antd";
 import { Link } from "react-router-dom";
+import { message } from "antd";
 import "./Home.scss";
 
 interface HomeState {
@@ -11,6 +12,7 @@ interface HomeState {
   page: number;
   prevY: number;
 }
+const key = "updatable";
 
 export default function Home() {
   const [state, setState] = React.useState<HomeState>({
@@ -27,15 +29,24 @@ export default function Home() {
       ...prevState,
       loading: true,
     }));
-    axios.get(`https://fakestoreapi.com/products`).then((res) => {
-      const newProducts = res.data;
-      console.log(newProducts);
-      setState((prevState) => ({
-        ...prevState,
-        loading: false,
-        products: newProducts,
-      }));
-    });
+    axios
+      .get(`https://fakestoreapi.com/products`)
+      .then((res) => {
+        const newProducts = res.data;
+        setState((prevState) => ({
+          ...prevState,
+          loading: false,
+          products: newProducts,
+        }));
+      })
+      .catch((error) => {
+        console.log("Errore: ", error);
+        message.error({
+          content: `${error.message}`,
+          key,
+          duration: 2,
+        });
+      });
   }, []);
 
   if (loading) {
@@ -52,7 +63,7 @@ export default function Home() {
           <div className="product" key={item.id}>
             <Link
               to={{
-                pathname: "/prodotto",
+                pathname: `/prodotto/${item.id}`,
                 state: {
                   id: item.id,
                 },

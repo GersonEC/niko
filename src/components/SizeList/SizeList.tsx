@@ -13,9 +13,14 @@ const SizeElement = styled.div<SizeElementProps>(
     justifyContent: "center",
     alignItems: "center",
     border: "1px solid rgba(117, 117, 117, 0.2)",
+    blockSize: "2rem",
   },
   (props: SizeElementProps) => ({
     backgroundColor: props.available ? "white" : "gainsboro",
+    ":hover": {
+      cursor: props.available ? "pointer" : "",
+      backgroundColor: props.available ? "gray" : "",
+    },
   })
 );
 

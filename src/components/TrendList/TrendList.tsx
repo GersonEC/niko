@@ -14,9 +14,8 @@ export default function TrendList(props: TrendListProps) {
         {props.productCardList &&
           props.productCardList.map((item) => {
             return (
-              <div role={"listitem"}>
+              <div role={"listitem"} key={item.name}>
                 <ProductCard
-                  key={item.name}
                   name={item.name}
                   description={item.description}
                   price={item.price}

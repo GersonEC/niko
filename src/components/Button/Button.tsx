@@ -11,7 +11,6 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
   {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
     border: "0",
     width: "22rem",
     borderRadius: "5rem",
@@ -40,7 +39,12 @@ export default function Button(props: ButtonProps) {
     <div>
       <ButtonNiko type={props.type} onClick={props.onClick}>
         <div>
-          <p>
+          <p
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             {props.labelText}{" "}
             {props.type === ButtonType.Secondary && <AiOutlineHeart />}
           </p>
