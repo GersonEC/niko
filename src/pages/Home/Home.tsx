@@ -1,9 +1,6 @@
-import axios from "axios";
 import * as React from "react";
-import { Product } from "utils/models";
 import { Spin } from "antd";
 import { Link } from "react-router-dom";
-import { message } from "antd";
 import "./Home.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "app/store";
@@ -18,7 +15,7 @@ export default function Home() {
 
   React.useEffect(() => {
     dispatch(fetchProductsAsync());
-  }, []);
+  }, [dispatch]);
 
   if (status === "loading") {
     return (

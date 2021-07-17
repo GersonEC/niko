@@ -9,7 +9,10 @@ import PreviewImages from "components/PreviewImages/PreviewImages";
 import ProductDetailPreview from "components/ProductDetail/ProductDetailPreview";
 import "./Product.scss";
 import { useDispatch } from "react-redux";
-import { increment as incrementCart } from "features/cart/cartSlice";
+import {
+  addProducToCart,
+  increment as incrementCart,
+} from "features/cart/cartSlice";
 import { increment as incrementWishList } from "features/wishList/wishListSlice";
 import { message } from "antd";
 import { useLocation } from "react-router-dom";
@@ -45,7 +48,7 @@ export default function Product() {
   const onAddCartClick = () => {
     message.loading({ content: "Loading...", key });
     setTimeout(() => {
-      dispatch(incrementCart());
+      dispatch(addProducToCart(product));
       message.success({
         content: "Prodotto aggiunto correttamente nel carrello.",
         key,

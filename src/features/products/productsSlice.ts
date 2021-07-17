@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState, AppThunk } from "../../app/store";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 import { fetchProducts } from "./productsAPI";
 import { Product } from "../../utils/models";
 
@@ -40,7 +40,7 @@ export const productsSlice = createSlice({
   },
 });
 
-export const {} = productsSlice.actions;
+//export const {} = productsSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of

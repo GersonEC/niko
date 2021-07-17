@@ -10,16 +10,21 @@ import useWindowSize from "hooks/useWindowSize";
 import "antd/dist/antd.css";
 import "./Header.scss";
 import { useSelector } from "react-redux";
-import { selectCart } from "features/cart/cartSlice";
 import { selectWishList } from "features/wishList/wishListSlice";
+import { RootState } from "app/store";
+import CartPreview from "components/CartPreview/CartPreview";
 
 const { Search } = Input;
 
 export default function Header() {
-  const cart = useSelector(selectCart);
+  const cartQuantity = useSelector(
+    (state: RootState) => state.cart.cartProducts.length
+  );
   const wishList = useSelector(selectWishList);
   const isMobile = useWindowSize();
   const [isDrawerVisible, setIsDrawerVisible] = React.useState(false);
+  const [isCartPreviewVisible, setIsCartPreviewVisible] = React.useState(false);
+
   const renderMenuNavigation = () => {
     return (
       <>
@@ -83,11 +88,15 @@ export default function Header() {
           </div>
           <AiOutlineHeart title="Lista desideri" />
         </div>
-        <div className="header_cart">
+        <div
+          className="header_cart"
+          onClick={() => setIsCartPreviewVisible(!isCartPreviewVisible)}
+        >
           <div className="cart_quantity_products">
-            <span className="cart_quantity_text">{cart}</span>
+            <span className="cart_quantity_text">{cartQuantity}</span>
           </div>
           <AiOutlineShoppingCart title="Carrello" />
+          {isCartPreviewVisible && <CartPreview />}
         </div>
       </div>
     </div>

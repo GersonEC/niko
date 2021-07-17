@@ -1,14 +1,17 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Product } from "utils/models";
 import { RootState, AppThunk } from "../../app/store";
 import { fetchCount } from "../counter/counterAPI";
 
 export interface CartState {
   value: number;
+  cartProducts: Product[];
   status: "idle" | "loading" | "failed";
 }
 
 const initialState: CartState = {
   value: 0,
+  cartProducts: [],
   status: "idle",
 };
 
@@ -31,6 +34,9 @@ export const cartSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
+    addProducToCart: (state, action: PayloadAction<Product>) => {
+      state.cartProducts.push(action.payload);
+    },
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
@@ -49,7 +55,8 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = cartSlice.actions;
+export const { increment, decrement, incrementByAmount, addProducToCart } =
+  cartSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
