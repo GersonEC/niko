@@ -9,10 +9,7 @@ import PreviewImages from "components/PreviewImages/PreviewImages";
 import ProductDetailPreview from "components/ProductDetail/ProductDetailPreview";
 import "./Product.scss";
 import { useDispatch } from "react-redux";
-import {
-  addProducToCart,
-  increment as incrementCart,
-} from "features/cart/cartSlice";
+import { addProducToCart } from "features/cart/cartSlice";
 import { increment as incrementWishList } from "features/wishList/wishListSlice";
 import { message } from "antd";
 import { useLocation } from "react-router-dom";

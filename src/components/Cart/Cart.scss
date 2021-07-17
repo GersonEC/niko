@@ -1,5 +1,6 @@
 .cart {
   display: flex;
+  margin-top: 1rem;
   justify-content: space-evenly;
 }
 
@@ -13,17 +14,8 @@
 
 .cart_title {
   font-size: 28px;
-  font-weight: bold;
   font-family: Avenir;
-}
-
-.cart_review {
-  //display: flex;
-  position: sticky;
-  top: 3rem;
-  border: 2px solid yellow;
-  inline-size: 20rem;
-  block-size: 30rem;
+  color: black;
 }
 
 .cart_products_row_info {

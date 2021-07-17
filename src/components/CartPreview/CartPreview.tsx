@@ -1,6 +1,5 @@
 import { RootState } from "app/store";
 import Button from "components/Button/Button";
-import history from "../../history.js";
 import { useSelector } from "react-redux";
 import { ButtonType, Product } from "utils/models";
 import "./CartPreview.scss";
@@ -17,7 +16,7 @@ export default function CartPreview() {
         cartProducts.map((item: Product) => {
           return (
             <div className="cart_preview_row" key={item.id}>
-              <img src={item.image} width={30} />
+              <img src={item.image} width={30} alt={item.title} />
               <span className="cart_preview_row_title" title={item.title}>
                 {item.title}
               </span>

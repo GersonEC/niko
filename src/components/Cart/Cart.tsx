@@ -1,6 +1,7 @@
 import { RootState } from "app/store";
 import { useSelector } from "react-redux";
 import { Product } from "utils/models";
+import CartReview from "./CartReview";
 import "./Cart.scss";
 
 export default function Cart() {
@@ -17,7 +18,7 @@ export default function Cart() {
             return (
               <div className={"cart_products_row"} key={item.id}>
                 <div className={"cart_products_row_img"}>
-                  <img src={item.image} width={60} />
+                  <img src={item.image} width={60} alt={item.title} />
                 </div>
                 <div className={"cart_products_row_info"}>
                   <p>
@@ -32,8 +33,8 @@ export default function Cart() {
             );
           })}
       </div>
-      <div className={"cart_review"}>
-        <h1>Review</h1>
+      <div>
+        <CartReview />
       </div>
     </div>
   );
