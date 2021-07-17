@@ -1,0 +1,36 @@
+.cart {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart_products_row {
+  display: flex;
+  inline-size: 45rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cart_title {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Avenir;
+}
+
+.cart_review {
+  //display: flex;
+  position: sticky;
+  top: 3rem;
+  border: 2px solid yellow;
+  inline-size: 20rem;
+  block-size: 30rem;
+}
+
+.cart_products_row_info {
+  inline-size: 30rem;
+}
+
+.cart_products_row_img {
+  padding: 10px;
+  background-color: rgb(238, 238, 238);
+}

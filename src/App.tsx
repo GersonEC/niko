@@ -9,6 +9,7 @@ import Gifts from "./pages/Gifts/Gifts";
 import NewTrends from "./pages/NewTrends/NewTrends";
 import Product from "pages/Product/Product";
 import Home from "pages/Home/Home";
+import Cart from "components/Cart/Cart";
 import "./App.css";
 const Routes = () => {
   return (
@@ -21,6 +22,7 @@ const Routes = () => {
       <Route path="/donna" component={Woman} />
       <Route path="/bambino" component={Child} />
       <Route path="/sconti" component={Discounts} />
+      <Route path="/carrello" component={Cart} />
     </Switch>
   );
 };
