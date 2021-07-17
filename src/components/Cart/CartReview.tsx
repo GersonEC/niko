@@ -61,7 +61,7 @@ export default function CartReview() {
           onClick={() => {}}
         />
         <Button
-          type={ButtonType.Secondary}
+          type={ButtonType.Wishlist}
           labelText={"Paypal"}
           onClick={() => {}}
         />

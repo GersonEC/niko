@@ -24,7 +24,7 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
   },
   (props: ButtonNikoProps) => ({
     backgroundColor: props.type === ButtonType.Primary ? "black" : "white",
-    border: props.type === ButtonType.Secondary ? "1px solid gainsboro" : "",
+    border: props.type === ButtonType.Wishlist ? "1px solid gainsboro" : "",
     color: props.type === ButtonType.Primary ? "white" : "black",
   })
 );
@@ -46,7 +46,7 @@ export default function Button(props: ButtonProps) {
             }}
           >
             {props.labelText}{" "}
-            {props.type === ButtonType.Secondary && <AiOutlineHeart />}
+            {props.type === ButtonType.Wishlist && <AiOutlineHeart />}
           </p>
         </div>
       </ButtonNiko>

@@ -1,6 +1,7 @@
 export enum ButtonType {
   Primary = "primary",
-  Secondary = "secondary",
+  Wishlist = "wishlist",
+  Paypal = "paypal",
 }
 
 export interface Size {

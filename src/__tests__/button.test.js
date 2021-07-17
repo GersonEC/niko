@@ -20,7 +20,7 @@ test("render primary button", () => {
 test("render wish list  button", () => {
   //Arrange
   const buttonProps = {
-    type: ButtonType.Secondary,
+    type: ButtonType.Wishlist,
     labelText: "Lista desideri",
   };
   render(<Button type={buttonProps.type} labelText={buttonProps.labelText} />);

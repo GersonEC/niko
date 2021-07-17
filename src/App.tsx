@@ -11,6 +11,15 @@ import Product from "pages/Product/Product";
 import Home from "pages/Home/Home";
 import Cart from "components/Cart/Cart";
 import "./App.css";
+
+/*
+TODO:
+-Implememt remove product function.
+-CSS transition between pages.
+-PayPal button
+-PayPal payment
+*/
+
 const Routes = () => {
   return (
     <Switch>

@@ -85,7 +85,7 @@ export default function Product() {
             onClick={onAddCartClick}
           />
           <Button
-            type={ButtonType.Secondary}
+            type={ButtonType.Wishlist}
             labelText={"Lista desideri"}
             onClick={onAddWishListClick}
           />
