@@ -5,51 +5,22 @@ import { Spin } from "antd";
 import { Link } from "react-router-dom";
 import { message } from "antd";
 import "./Home.scss";
-
-interface HomeState {
-  products: Product[];
-  loading: boolean;
-  page: number;
-  prevY: number;
-}
-const key = "updatable";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "app/store";
+import { fetchProductsAsync } from "features/products/productsSlice";
 
 export default function Home() {
-  const [state, setState] = React.useState<HomeState>({
-    products: [],
-    loading: false,
-    page: 0,
-    prevY: 0,
-  });
-
-  const { products, loading } = state;
+  const dispatch = useDispatch();
+  const productList = useSelector(
+    (state: RootState) => state.products.productList
+  );
+  const status = useSelector((state: RootState) => state.products.status);
 
   React.useEffect(() => {
-    setState((prevState) => ({
-      ...prevState,
-      loading: true,
-    }));
-    axios
-      .get(`https://fakestoreapi.com/products`)
-      .then((res) => {
-        const newProducts = res.data;
-        setState((prevState) => ({
-          ...prevState,
-          loading: false,
-          products: newProducts,
-        }));
-      })
-      .catch((error) => {
-        console.log("Errore: ", error);
-        message.error({
-          content: `${error.message}`,
-          key,
-          duration: 2,
-        });
-      });
+    dispatch(fetchProductsAsync());
   }, []);
 
-  if (loading) {
+  if (status === "loading") {
     return (
       <div className="spin_container">
         <Spin size="large" />
@@ -58,22 +29,23 @@ export default function Home() {
   }
   return (
     <div className="product_container">
-      {products.map((item) => {
-        return (
-          <div className="product" key={item.id}>
-            <Link
-              to={{
-                pathname: `/prodotto/${item.id}`,
-                state: {
-                  id: item.id,
-                },
-              }}
-            >
-              <img src={item.image} width={200} alt={item.title} />
-            </Link>
-          </div>
-        );
-      })}
+      {productList &&
+        productList.map((item) => {
+          return (
+            <div className="product" key={item.id}>
+              <Link
+                to={{
+                  pathname: `/prodotto/${item.id}`,
+                  state: {
+                    id: item.id,
+                  },
+                }}
+              >
+                <img src={item.image} width={200} alt={item.title} />
+              </Link>
+            </div>
+          );
+        })}
     </div>
   );
 }
