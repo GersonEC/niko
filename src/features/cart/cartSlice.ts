@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "utils/models";
-import { RootState, AppThunk } from "../../app/store";
+import { RootState } from "../../app/store";
 import { fetchCount } from "../counter/counterAPI";
 
 export interface CartState {
@@ -28,17 +28,15 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
     addProducToCart: (state, action: PayloadAction<Product>) => {
       state.cartProducts.push(action.payload);
     },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    removeProductFromCart: (state, action: PayloadAction<number>) => {
+      const idToRemove = action.payload;
+      const cartProductsFiltered = state.cartProducts.filter(
+        (item) => item.id !== idToRemove
+      );
+      state.cartProducts = cartProductsFiltered;
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -55,8 +53,7 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, addProducToCart } =
-  cartSlice.actions;
+export const { removeProductFromCart, addProducToCart } = cartSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
@@ -65,13 +62,13 @@ export const selectCart = (state: RootState) => state.cart.value;
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.
-export const incrementIfOdd =
+/*export const incrementIfOdd =
   (amount: number): AppThunk =>
   (dispatch, getState) => {
     const currentValue = selectCart(getState());
     if (currentValue % 2 === 1) {
       dispatch(incrementByAmount(amount));
     }
-  };
+  };*/
 
 export default cartSlice.reducer;

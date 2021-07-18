@@ -26,3 +26,10 @@
   padding: 10px;
   background-color: rgb(238, 238, 238);
 }
+
+.cart_products_row_trash {
+  :hover {
+    cursor: pointer;
+    color: red;
+  }
+}

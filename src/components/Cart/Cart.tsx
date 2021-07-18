@@ -1,13 +1,31 @@
 import { RootState } from "app/store";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Product } from "utils/models";
 import CartReview from "./CartReview";
+import { BsFillTrashFill } from "react-icons/bs";
+import { removeProductFromCart } from "features/cart/cartSlice";
 import "./Cart.scss";
+import { message } from "antd";
+
+const key = "updatable";
 
 export default function Cart() {
+  const dispatch = useDispatch();
   const cartProducts = useSelector(
     (state: RootState) => state.cart.cartProducts
   );
+
+  const onRemoveClick = (id: number) => {
+    message.loading({ content: "Loading...", key });
+    setTimeout(() => {
+      dispatch(removeProductFromCart(id));
+      message.success({
+        content: "Prodotto rimosso correttamente dal carrello.",
+        key,
+        duration: 2,
+      });
+    }, 1000);
+  };
 
   return (
     <div className={"cart"}>
@@ -26,9 +44,14 @@ export default function Cart() {
                   </p>
                   <p>{item.title}</p>
                 </div>
-                <p>
-                  <b>{item.price} €</b>
-                </p>
+                <div style={{ display: "flex", gap: "2rem" }}>
+                  <p>
+                    <b>{item.price} €</b>
+                  </p>
+                  <div className="cart_products_row_trash">
+                    <BsFillTrashFill onClick={() => onRemoveClick(item.id)} />
+                  </div>
+                </div>
               </div>
             );
           })}
