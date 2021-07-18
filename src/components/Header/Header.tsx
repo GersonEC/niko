@@ -96,8 +96,8 @@ export default function Header() {
             <span className="cart_quantity_text">{cartQuantity}</span>
           </div>
           <AiOutlineShoppingCart title="Carrello" />
-          {isCartPreviewVisible && <CartPreview />}
         </div>
+        {isCartPreviewVisible && <CartPreview />}
       </div>
     </div>
   );

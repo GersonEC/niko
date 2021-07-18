@@ -14,10 +14,9 @@ import "./App.css";
 
 /*
 TODO:
--Implememt remove product function.
--CSS transition between pages.
 -PayPal button
 -PayPal payment
+-CSS transition between pages.
 */
 
 const Routes = () => {

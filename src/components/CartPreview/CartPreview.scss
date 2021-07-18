@@ -7,7 +7,7 @@
   justify-content: flex-start;
   overflow: auto;
   position: absolute;
-  margin-left: -16rem;
+  margin-left: 3rem;
   top: 3.3rem;
   background-color: rgb(252, 252, 252);
   z-index: 1;
@@ -16,11 +16,10 @@
 }
 
 .cart_preview_row {
-  //outline: 2px solid red;
   border-bottom: 1px solid gainsboro;
   display: flex;
   justify-content: space-evenly;
-  inline-size: 17rem;
+  inline-size: 19rem;
   block-size: 5rem;
   gap: 1rem;
   align-items: center;
@@ -33,4 +32,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 13px;
+}
+
+.cart_preview_row_trash {
+  :hover {
+    cursor: pointer;
+    color: red;
+  }
 }

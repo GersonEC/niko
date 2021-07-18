@@ -4,8 +4,8 @@ import { Product } from "utils/models";
 import CartReview from "./CartReview";
 import { BsFillTrashFill } from "react-icons/bs";
 import { removeProductFromCart } from "features/cart/cartSlice";
-import "./Cart.scss";
 import { message } from "antd";
+import "./Cart.scss";
 
 const key = "updatable";
 
@@ -30,7 +30,7 @@ export default function Cart() {
   return (
     <div className={"cart"}>
       <div>
-        <p className={"cart_title"}>Prodotti del Carrello</p>
+        <p className={"cart_title"}>Prodotti nel Carrello</p>
         {cartProducts &&
           cartProducts.map((item: Product) => {
             return (

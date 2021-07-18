@@ -2,6 +2,7 @@
 import styled from "@emotion/styled";
 import { ButtonType } from "../../utils/models";
 import { AiOutlineHeart } from "react-icons/ai";
+import PaypalImage from "assets/images/paypal.svg";
 
 type ButtonNikoProps = {
   type: string;
@@ -23,8 +24,16 @@ const ButtonNiko = styled.div<ButtonNikoProps>(
     },
   },
   (props: ButtonNikoProps) => ({
-    backgroundColor: props.type === ButtonType.Primary ? "black" : "white",
-    border: props.type === ButtonType.Wishlist ? "1px solid gainsboro" : "",
+    backgroundColor:
+      props.type === ButtonType.Primary
+        ? "black"
+        : props.type === ButtonType.Wishlist
+        ? "white"
+        : "gainsboro",
+    border:
+      props.type === ButtonType.Wishlist || props.type === ButtonType.Paypal
+        ? "1px solid gainsboro"
+        : "",
     color: props.type === ButtonType.Primary ? "white" : "black",
   })
 );
@@ -47,6 +56,14 @@ export default function Button(props: ButtonProps) {
           >
             {props.labelText}{" "}
             {props.type === ButtonType.Wishlist && <AiOutlineHeart />}
+            {props.type === ButtonType.Paypal && (
+              <img
+                style={{ marginTop: "0.5rem" }}
+                src={PaypalImage}
+                alt="paypal"
+                title="Paypal"
+              />
+            )}
           </p>
         </div>
       </ButtonNiko>

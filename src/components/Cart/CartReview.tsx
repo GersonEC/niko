@@ -15,6 +15,8 @@ export default function CartReview() {
     if (cartProducts.length > 0) {
       const totalPrice = cartProducts.map((item) => item.price);
       setTotal(totalPrice.reduce((acc, currentValue) => acc + currentValue));
+    } else {
+      setTotal(0);
     }
   }, [cartProducts]);
 
@@ -52,19 +54,15 @@ export default function CartReview() {
       <div className="cart_review_buttons">
         <Button
           type={ButtonType.Primary}
-          labelText={"Acquista come visitatore"}
+          labelText="Acquista come visitatore"
           onClick={() => {}}
         />
         <Button
           type={ButtonType.Primary}
-          labelText={"Acquista come membro"}
+          labelText="Acquista come membro"
           onClick={() => {}}
         />
-        <Button
-          type={ButtonType.Wishlist}
-          labelText={"Paypal"}
-          onClick={() => {}}
-        />
+        <Button type={ButtonType.Paypal} labelText="" onClick={() => {}} />
       </div>
     </div>
   );
