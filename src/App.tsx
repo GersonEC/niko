@@ -14,7 +14,6 @@ import "./App.css";
 
 /*
 TODO:
--PayPal button
 -PayPal payment
 -CSS transition between pages.
 */
@@ -40,9 +39,7 @@ function App() {
     <div className="App">
       <Router>
         <Template>
-          <Switch>
-            <Routes />
-          </Switch>
+          <Routes />
         </Template>
       </Router>
     </div>

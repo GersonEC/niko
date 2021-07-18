@@ -29,6 +29,10 @@ export default function Product() {
   );
 
   React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
+  React.useEffect(() => {
     const getProduct = () => {
       if (idProduct) {
         axios
