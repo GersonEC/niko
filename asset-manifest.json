@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/niko/static/css/main.a1e07079.chunk.css",
-    "main.js": "/niko/static/js/main.5c214806.chunk.js",
-    "main.js.map": "/niko/static/js/main.5c214806.chunk.js.map",
+    "main.js": "/niko/static/js/main.b72fc031.chunk.js",
+    "main.js.map": "/niko/static/js/main.b72fc031.chunk.js.map",
     "runtime-main.js": "/niko/static/js/runtime-main.5a5c6c31.js",
     "runtime-main.js.map": "/niko/static/js/runtime-main.5a5c6c31.js.map",
     "static/css/2.10bc9b17.chunk.css": "/niko/static/css/2.10bc9b17.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.10bc9b17.chunk.css",
     "static/js/2.d0c9f0ce.chunk.js",
     "static/css/main.a1e07079.chunk.css",
-    "static/js/main.5c214806.chunk.js"
+    "static/js/main.b72fc031.chunk.js"
   ]
 }
