@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Template from "./components/Template/Template";
 import Man from "./pages/Man/Man";
 import Woman from "./pages/Woman/Woman";
@@ -14,13 +19,16 @@ import "./App.css";
 
 /*
 TODO:
+-Creare API MANAGER e pulire i componenti.
 -PayPal payment
--CSS transition between pages.
 */
 
 const Routes = () => {
   return (
     <Switch>
+      <Route exact path="/niko" component={Home}>
+        <Redirect to="/" />{" "}
+      </Route>
       <Route exact path="/" component={Home} />
       <Route path={`/prodotto/:id`} component={Product} />
       <Route path="/nuove-tendenze" component={NewTrends} />
