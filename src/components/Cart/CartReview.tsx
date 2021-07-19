@@ -14,7 +14,10 @@ export default function CartReview() {
   React.useEffect(() => {
     if (cartProducts.length > 0) {
       const totalPrice = cartProducts.map((item) => item.price);
-      setTotal(totalPrice.reduce((acc, currentValue) => acc + currentValue));
+      const total = totalPrice.reduce(
+        (acc, currentValue) => acc + currentValue
+      );
+      setTotal(Number(total.toFixed(2)));
     } else {
       setTotal(0);
     }
