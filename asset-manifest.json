@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/niko/static/css/main.a1e07079.chunk.css",
-    "main.js": "/niko/static/js/main.e7c32594.chunk.js",
-    "main.js.map": "/niko/static/js/main.e7c32594.chunk.js.map",
+    "main.js": "/niko/static/js/main.5c214806.chunk.js",
+    "main.js.map": "/niko/static/js/main.5c214806.chunk.js.map",
     "runtime-main.js": "/niko/static/js/runtime-main.5a5c6c31.js",
     "runtime-main.js.map": "/niko/static/js/runtime-main.5a5c6c31.js.map",
     "static/css/2.10bc9b17.chunk.css": "/niko/static/css/2.10bc9b17.chunk.css",
-    "static/js/2.cdde5a53.chunk.js": "/niko/static/js/2.cdde5a53.chunk.js",
-    "static/js/2.cdde5a53.chunk.js.map": "/niko/static/js/2.cdde5a53.chunk.js.map",
+    "static/js/2.d0c9f0ce.chunk.js": "/niko/static/js/2.d0c9f0ce.chunk.js",
+    "static/js/2.d0c9f0ce.chunk.js.map": "/niko/static/js/2.d0c9f0ce.chunk.js.map",
     "index.html": "/niko/index.html",
     "static/css/2.10bc9b17.chunk.css.map": "/niko/static/css/2.10bc9b17.chunk.css.map",
     "static/css/main.a1e07079.chunk.css.map": "/niko/static/css/main.a1e07079.chunk.css.map",
-    "static/js/2.cdde5a53.chunk.js.LICENSE.txt": "/niko/static/js/2.cdde5a53.chunk.js.LICENSE.txt",
+    "static/js/2.d0c9f0ce.chunk.js.LICENSE.txt": "/niko/static/js/2.d0c9f0ce.chunk.js.LICENSE.txt",
     "static/media/niko_logo.d6be4067.svg": "/niko/static/media/niko_logo.d6be4067.svg",
     "static/media/paypal.07778dc0.svg": "/niko/static/media/paypal.07778dc0.svg",
     "static/media/scarpe.104a99d6.svg": "/niko/static/media/scarpe.104a99d6.svg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a5c6c31.js",
     "static/css/2.10bc9b17.chunk.css",
-    "static/js/2.cdde5a53.chunk.js",
+    "static/js/2.d0c9f0ce.chunk.js",
     "static/css/main.a1e07079.chunk.css",
-    "static/js/main.e7c32594.chunk.js"
+    "static/js/main.5c214806.chunk.js"
   ]
 }
