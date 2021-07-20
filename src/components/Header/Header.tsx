@@ -93,7 +93,12 @@ export default function Header() {
           onClick={() => setIsCartPreviewVisible(!isCartPreviewVisible)}
         >
           <div className="cart_quantity_products">
-            <span className="cart_quantity_text">{cartQuantity}</span>
+            <span
+              data-testid="cart_quantity_text"
+              className="cart_quantity_text"
+            >
+              {cartQuantity}
+            </span>
           </div>
           <AiOutlineShoppingCart title="Carrello" />
         </div>
