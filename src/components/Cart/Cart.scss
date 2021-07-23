@@ -2,6 +2,12 @@
   display: flex;
   margin-top: 1rem;
   justify-content: space-evenly;
+  border: 2px solid red;
+  /*@media (min-width: 900px) and (max-width: 1200px) {
+    display: flex;
+    height: 65rem;
+    inline-size: 90vw;
+  }*/
 }
 
 .cart_products_row {

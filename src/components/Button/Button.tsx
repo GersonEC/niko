@@ -46,7 +46,11 @@ interface ButtonProps {
 export default function Button(props: ButtonProps) {
   return (
     <div>
-      <ButtonNiko type={props.type} onClick={props.onClick}>
+      <ButtonNiko
+        data-testid="niko-button"
+        type={props.type}
+        onClick={props.onClick}
+      >
         <div>
           <p
             style={{
