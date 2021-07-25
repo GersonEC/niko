@@ -34,7 +34,11 @@ export default function Cart() {
         {cartProducts &&
           cartProducts.map((item: Product) => {
             return (
-              <div className={"cart_products_row"} key={item.id}>
+              <div
+                data-testid="cart-product"
+                className={"cart_products_row"}
+                key={item.id}
+              >
                 <div className={"cart_products_row_img"}>
                   <img src={item.image} width={60} alt={item.title} />
                 </div>

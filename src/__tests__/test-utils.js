@@ -5,6 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 // Import your own reducer
 import cartReducer from "../features/cart/cartSlice";
+import productsReducer from "../features/products/productsSlice";
 import wishListReducer from "../features/wishList/wishListSlice";
 import { Router, Route } from "react-router-dom";
 import { createMemoryHistory } from "history";
@@ -14,7 +15,11 @@ function render(
   {
     preloadedState,
     store = configureStore({
-      reducer: { cart: cartReducer, wishList: wishListReducer },
+      reducer: {
+        cart: cartReducer,
+        wishList: wishListReducer,
+        products: productsReducer,
+      },
       preloadedState,
     }),
     path = "/",

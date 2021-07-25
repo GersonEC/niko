@@ -1,6 +1,6 @@
 import { render, screen } from "./test-utils";
 import TrendList from "../components/TrendList/TrendList";
-import { productCardList } from "utils/data";
+import { productCardList } from "utils/mockData";
 
 test("render trend list", () => {
   render(<TrendList productCardList={productCardList} />);

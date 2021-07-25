@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "components/Button/Button";
 import { ButtonType, Product as ProductModel } from "../../utils/models";
-import { sizeListData, productCardList } from "utils/data";
+import { sizeListData, productCardList } from "utils/mockData";
 import SizeList from "components/SizeList/SizeList";
 import ProductDetail from "components/ProductDetail/ProductDetail";
 import TrendList from "components/TrendList/TrendList";
