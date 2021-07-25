@@ -1,7 +1,7 @@
 import { RootState } from "app/store";
 import { useDispatch, useSelector } from "react-redux";
 import { Product } from "utils/models";
-import CartReview from "./CartReview";
+import CartReview from "../../components/CartReview/CartReview";
 import { BsFillTrashFill } from "react-icons/bs";
 import { removeProductFromCart } from "features/cart/cartSlice";
 import { message } from "antd";

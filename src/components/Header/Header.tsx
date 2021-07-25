@@ -7,12 +7,13 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import useWindowSize from "hooks/useWindowSize";
-import "antd/dist/antd.css";
-import "./Header.scss";
 import { useSelector } from "react-redux";
 import { selectWishList } from "features/wishList/wishListSlice";
 import { RootState } from "app/store";
 import CartPreview from "components/CartPreview/CartPreview";
+import Menu from "./Menu";
+import "antd/dist/antd.css";
+import "./Header.scss";
 
 const { Search } = Input;
 
@@ -25,31 +26,6 @@ export default function Header() {
   const [isDrawerVisible, setIsDrawerVisible] = React.useState(false);
   const [isCartPreviewVisible, setIsCartPreviewVisible] = React.useState(false);
 
-  const renderMenuNavigation = () => {
-    return (
-      <>
-        <Link className="header_nav_el" to="/nuove-tendenze">
-          Nuove tendenze
-        </Link>
-        <Link className="header_nav_el" to="/regali">
-          Regali
-        </Link>
-        <Link className="header_nav_el" to="/uomo">
-          Uomo
-        </Link>
-        <Link className="header_nav_el" to="/donna">
-          Donna
-        </Link>
-        <Link className="header_nav_el" to="/bambino">
-          Bambino
-        </Link>
-        <Link className="header_nav_el" to="/sconti">
-          Sconti
-        </Link>
-      </>
-    );
-  };
-
   return (
     <div className="header">
       <div className="header_logo">
@@ -58,7 +34,7 @@ export default function Header() {
         </Link>
       </div>
       {isMobile.width < 1200 ? (
-        <div className="header_navigation">
+        <div>
           <MenuOutlined onClick={() => setIsDrawerVisible(true)} />
           <Drawer
             title="Menu"
@@ -68,11 +44,13 @@ export default function Header() {
             visible={isDrawerVisible}
             key={"left"}
           >
-            {renderMenuNavigation()}
+            <Menu />
           </Drawer>
         </div>
       ) : (
-        <div className="header_navigation">{renderMenuNavigation()}</div>
+        <div>
+          <Menu />
+        </div>
       )}
 
       <div className="header_shopping">
