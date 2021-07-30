@@ -3,8 +3,8 @@ import Button from "./Button";
 import { ButtonType } from "../../utils/models";
 import userEvent from "@testing-library/user-event";
 
-describe("Button testing", () => {
-  test("render primary button with black background", () => {
+describe("Button", () => {
+  test("render primary button", () => {
     const buttonProps = {
       type: ButtonType.Primary,
       labelText: "Aggiungere al Carrello",

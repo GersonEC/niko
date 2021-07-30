@@ -30,35 +30,46 @@ export default function CartPreview() {
 
   return (
     <div className="cart_preview">
-      {cartProducts &&
-        cartProducts.map((item: Product) => {
-          return (
-            <div className="cart_preview_row" key={item.id}>
-              <img src={item.image} width={30} alt={item.title} />
-              <span className="cart_preview_row_title" title={item.title}>
-                {item.title}
-              </span>
-              <span style={{ fontSize: "12px" }}>
-                <b>{item.price} €</b>
-              </span>
-              <div className="cart_preview_row_trash">
-                <BsFillTrashFill
-                  style={{ fontSize: "12px" }}
-                  onClick={() => onRemoveClick(item.id)}
-                />
+      {cartProducts.length > 0 ? (
+        <>
+          {cartProducts.map((item: Product) => {
+            return (
+              <div
+                data-testid="product_row"
+                className="cart_preview_row"
+                key={item.id}
+              >
+                <img src={item.image} width={30} alt={item.title} />
+                <span className="cart_preview_row_title" title={item.title}>
+                  {item.title}
+                </span>
+                <span style={{ fontSize: "12px" }}>
+                  <b>{item.price} €</b>
+                </span>
+                <div className="cart_preview_row_trash">
+                  <BsFillTrashFill
+                    style={{ fontSize: "12px" }}
+                    onClick={() => onRemoveClick(item.id)}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
-      <div style={{ padding: "1rem" }}>
-        <Link to={"/carrello"}>
-          <Button
-            type={ButtonType.Primary}
-            labelText={"Vai al carrello"}
-            onClick={() => {}}
-          />
-        </Link>
-      </div>
+            );
+          })}
+          <div style={{ padding: "1rem" }}>
+            <Link to={"/carrello"}>
+              <Button
+                type={ButtonType.Primary}
+                labelText={"Vai al carrello"}
+                onClick={() => {}}
+              />
+            </Link>
+          </div>
+        </>
+      ) : (
+        <h3 className="cart_preview_no_products">
+          Nessun prodotto nel carrello.
+        </h3>
+      )}
     </div>
   );
 }

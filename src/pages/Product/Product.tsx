@@ -33,7 +33,7 @@ export default function Product() {
   }, []);
 
   React.useEffect(() => {
-    const getProduct = () => {
+    const getProduct = async () => {
       if (idProduct) {
         axios
           .get(`https://fakestoreapi.com/products/${idProduct}`)

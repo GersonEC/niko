@@ -11,7 +11,7 @@ describe("Testing Cart component", () => {
         },
       },
     });
-
-    screen.getAllByText("men's clothing");
+    const products = screen.getAllByTestId("cart-product");
+    expect(products).toHaveLength(2);
   });
 });

@@ -43,3 +43,10 @@
     color: red;
   }
 }
+
+.cart_preview_no_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
