@@ -48,6 +48,7 @@ export default function CartPreview() {
                 </span>
                 <div className="cart_preview_row_trash">
                   <BsFillTrashFill
+                    title="Rimuovere elemento"
                     style={{ fontSize: "12px" }}
                     onClick={() => onRemoveClick(item.id)}
                   />

@@ -42,6 +42,7 @@ interface ButtonProps {
   type: ButtonType;
   labelText: string;
   onClick: () => void;
+  disabled?: boolean;
 }
 export default function Button(props: ButtonProps) {
   return (
