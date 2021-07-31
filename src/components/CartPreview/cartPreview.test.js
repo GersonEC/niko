@@ -29,6 +29,12 @@ describe("CartPreview", () => {
     });
     const products = screen.getAllByTestId("product_row");
     expect(products).toHaveLength(2);
+    expect(products[0]).toHaveTextContent(
+      "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+    );
+    expect(products[1]).toHaveTextContent(
+      "Mens Casual Premium Slim Fit T-Shirts"
+    );
     expect(
       screen.getByText(/vai al carrello/i, { exact: true })
     ).toBeInTheDocument();
